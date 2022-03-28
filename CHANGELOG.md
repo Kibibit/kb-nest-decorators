@@ -1,5 +1,12 @@
 achievibit changelog
 
+# [1.0.0-beta.3](https://github.com/Kibibit/kb-nest-decorators/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-03-28)
+
+
+### Bug Fixes
+
+* **compilation:** remove tsconfig paths and return to normal imports ([edbcdb4](https://github.com/Kibibit/kb-nest-decorators/commit/edbcdb4376ecc63c29590cd78e9ff9b82219e8c8))
+
 # [1.0.0-beta.2](https://github.com/Kibibit/kb-nest-decorators/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-03-28)
 
 
