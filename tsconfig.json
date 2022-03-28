@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "outDir": "./lib",
+    "baseUrl": "./",
+    "paths": {
+      "@kb-decorators": [ "src/decorators/index" ],
+      "@kb-models": [ "src/models/index" ],
+      "@kb-types": [ "src/types/index" ]
+    },
+    "incremental": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "lib",
+    "examples",
+    "**/*spec.ts",
+    "**/*mock.ts",
+    "jest.config.js",
+    "jest.setup.ts"
+  ]
+}
