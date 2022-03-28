@@ -13,9 +13,6 @@
     "outDir": "./lib",
     "baseUrl": "./src",
     "paths": {
-      "@kb-decorators": [ "decorators/index" ],
-      "@kb-models": [ "models/index" ],
-      "@kb-types": [ "types/index" ]
     },
     "incremental": true,
     "skipLibCheck": true

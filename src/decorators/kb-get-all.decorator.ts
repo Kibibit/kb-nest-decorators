@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { ApiOkResponse, ApiOperation } from '@nestjs/swagger';
 
-import { IClassNewable } from '@kb-types';
+import { IClassNewable } from '../types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function KbGetAll<DbGenericType>(

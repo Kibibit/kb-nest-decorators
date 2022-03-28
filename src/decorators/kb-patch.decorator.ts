@@ -13,9 +13,9 @@ import {
   ApiOperation
 } from '@nestjs/swagger';
 
-import { KbApiValidateErrorResponse } from '@kb-decorators';
-import { KbPublicError } from '@kb-models';
-import { IClassNewable } from '@kb-types';
+import { KbApiValidateErrorResponse } from '../decorators';
+import { KbPublicError } from '../models';
+import { IClassNewable } from '../types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function KbPatch<DbGenericType, ErrorGenericType>(

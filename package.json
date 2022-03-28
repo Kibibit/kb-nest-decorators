@@ -9,7 +9,7 @@
     "/src"
   ],
   "scripts": {
-    "prebuild": "rimraf lib",
+    "prebuild": "rimraf lib && npm run generate-barrels",
     "build": "tsc",
     "lint": "eslint -c ./.eslintrc.js \"{src,apps,libs,test,examples}/**/*.ts\"",
     "lint:fix": "eslint -c ./.eslintrc.js \"{src,apps,libs,test,examples}/**/*.ts\" --fix",

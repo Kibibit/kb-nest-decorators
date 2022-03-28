@@ -3,7 +3,8 @@
 import { applyDecorators, HttpStatus } from '@nestjs/common';
 import { ApiResponse } from '@nestjs/swagger';
 
-import { IClassNewable } from '@kb-types';
+import { IClassNewable } from '../types';
+
 
 export function KbApiValidateErrorResponse<T>(ErrorClass: IClassNewable<T>) {
   return applyDecorators(
