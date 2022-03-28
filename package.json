@@ -18,7 +18,7 @@
     "contributors:generate": "cross-env HUSKY=1 all-contributors generate",
     "prepare": "husky install",
     "generate-barrels": "barrelsby --delete -d ./src -l all -q --exclude spec.ts --exclude __mocks__",
-    "semantic-release": "semantic-release",
+    "semantic-release": "cross-env HUSKY=0 semantic-release",
     "test": "jest",
     "test:watch": "jest --watch --verbose",
     "test:cov": "jest --coverage --verbose",
