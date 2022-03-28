@@ -1,5 +1,12 @@
 achievibit changelog
 
+# [1.0.0-beta.2](https://github.com/Kibibit/kb-nest-decorators/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-03-28)
+
+
+### Bug Fixes
+
+* **compilation:** try and fix path resolution ([5e9106b](https://github.com/Kibibit/kb-nest-decorators/commit/5e9106bbb449d2fa6efee5e5e7c7db107ef20d52))
+
 # 1.0.0-beta.1 (2022-03-28)
 
 
