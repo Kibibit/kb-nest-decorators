@@ -14,13 +14,17 @@ import { IClassNewable } from '../types';
 export function KbPost<DbGenericType, ErrorGenericType>(
   type: IClassNewable<DbGenericType>,
   path?: string | string[],
-  errorType: IClassNewable<ErrorGenericType | KbPublicError> = KbPublicError
+  errorType: IClassNewable<ErrorGenericType | KbPublicError> = KbPublicError,
+  options: {
+    successDescription?: string;
+    summary?: string;
+  } = {}
 ) {
   return applyDecorators(
     Post(path),
-    ApiOperation({ summary: `Create a new ${ type.name }` }),
+    ApiOperation({ summary: options.summary || `Create a new ${ type.name }` }),
     ApiCreatedResponse({
-      description: `The ${ type.name } has been successfully created.`,
+      description: options.successDescription || `The ${ type.name } has been successfully created.`,
       type
     }),
     KbApiValidateErrorResponse(errorType),
