@@ -1,5 +1,12 @@
 achievibit changelog
 
+# [1.1.0](https://github.com/Kibibit/kb-nest-decorators/compare/v1.0.0...v1.1.0) (2022-03-29)
+
+
+### Features
+
+* **decorators:** allow users to override descriptions if needed ([e241477](https://github.com/Kibibit/kb-nest-decorators/commit/e2414775257251b16b0217476a0fc0436c6f742c))
+
 # 1.0.0 (2022-03-28)
 
 
