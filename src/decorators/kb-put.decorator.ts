@@ -19,19 +19,23 @@ import { IClassNewable } from '../types';
 export function KbPut<DbGenericType, ErrorGenericType>(
   type: IClassNewable<DbGenericType>,
   path?: string | string[],
-  errorType: IClassNewable<ErrorGenericType | KbPublicError> = KbPublicError
+  errorType: IClassNewable<ErrorGenericType | KbPublicError> = KbPublicError,
+  options: {
+    successDescription?: string;
+    summary?: string;
+  } = {}
 ) {
   return applyDecorators(
     Put(path),
     ApiOperation({
-      summary: `Update an existing ${ type.name }`,
+      summary: options.summary || `Update an existing ${ type.name }`,
       description: `Expects a full ${ type.name }`
     }),
-    ApiOkResponse({ type: type, description: `${ type.name } updated` }),
+    ApiOkResponse({ type: type, description: options.successDescription || `${ type.name } updated` }),
     ApiNotFoundResponse({
       description: `${ type.name } not found`
     }),
-    ApiBadRequestResponse({ description: 'Invalid identifier supplied' }),
+    ApiBadRequestResponse({ description: 'Invalid paramters supplied' }),
     KbApiValidateErrorResponse(errorType),
     UseInterceptors(ClassSerializerInterceptor)
   );

@@ -1,3 +1,5 @@
+import { noop } from 'lodash';
+
 import {
   applyDecorators,
   ClassSerializerInterceptor,
@@ -16,18 +18,23 @@ import { IClassNewable } from '../types';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function KbDelete<DbGenericType>(
   type: IClassNewable<DbGenericType>,
-  path?: string | string[]
+  path?: string | string[],
+  options: {
+    successDescription?: string;
+    summary?: string;
+    neverFails?: boolean;
+  } = {}
 ) {
   return applyDecorators(
     Delete(path),
     ApiOperation({
-      summary: `Delete an existing ${ type.name }`
+      summary: options.summary || `Delete an existing ${ type.name }`
     }),
-    ApiOkResponse({ type: type, description: `${ type.name } deleted` }),
-    ApiNotFoundResponse({
+    ApiOkResponse({ type: type, description: options.successDescription || `${ type.name } deleted` }),
+    options.neverFails ? noop : ApiNotFoundResponse({
       description: `${ type.name } not found`
     }),
-    ApiBadRequestResponse({ description: 'Invalid identifier supplied' }),
+    options.neverFails ? noop : ApiBadRequestResponse({ description: 'Invalid identifier supplied' }),
     UseInterceptors(ClassSerializerInterceptor)
   );
 }
