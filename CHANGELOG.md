@@ -1,5 +1,12 @@
 achievibit changelog
 
+# [1.0.0-beta.5](https://github.com/Kibibit/kb-nest-decorators/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2022-03-29)
+
+
+### Bug Fixes
+
+* **release:** allow manual release ([e5bc2f3](https://github.com/Kibibit/kb-nest-decorators/commit/e5bc2f3b26e9a3965099d919d4a2ca35116612eb))
+
 # [1.0.0-beta.4](https://github.com/Kibibit/kb-nest-decorators/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2022-03-29)
 
 
