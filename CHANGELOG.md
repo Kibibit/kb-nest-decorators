@@ -1,5 +1,13 @@
 achievibit changelog
 
+## [1.1.1](https://github.com/Kibibit/kb-nest-decorators/compare/v1.1.0...v1.1.1) (2022-03-31)
+
+
+### Bug Fixes
+
+* **release:** allow manual release ([e5bc2f3](https://github.com/Kibibit/kb-nest-decorators/commit/e5bc2f3b26e9a3965099d919d4a2ca35116612eb))
+* **get-all:** register type in OK Response swagger ([676ec4e](https://github.com/Kibibit/kb-nest-decorators/commit/676ec4edf190ea6c89d13e45fa9791defaaaf4b0))
+
 # [1.1.0](https://github.com/Kibibit/kb-nest-decorators/compare/v1.0.0...v1.1.0) (2022-03-29)
 
 
