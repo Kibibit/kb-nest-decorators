@@ -23,7 +23,11 @@ export function KbGetAll<DbGenericType>(
   return applyDecorators(
     Get(path),
     ApiOperation({ summary: options.summary || `Get all ${ model.name }s` }),
-    ApiOkResponse({ description: options.successDescription || `Return a list of all ${ model.name }s` }),
+    ApiOkResponse({
+      description: options.successDescription || `Return a list of all ${ model.name }s`,
+      type: model,
+      isArray: true
+    }),
     options.neverFails ? noop : ApiNotFoundResponse({
       description: `Failed to fetch all ${ model.name }`
     }),
